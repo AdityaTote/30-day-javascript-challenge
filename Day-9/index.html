@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Manipulation</title>
+    <style>
+        #myElement {
+            width: 200px;
+            height: 100px;
+            background-color: #000000;
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body style="background-color: black; color: aliceblue;">
+    <div id="div1">
+      <h1 style="color: rgb(241, 35, 35)">Dom Manipulation</h1>
+      <p id="para" style="color: rgb(72, 73, 163)">
+        Yesterday is a history an tommorow is Mystery
+      </p>
+      <p class="para1" style="color: rgb(46, 175, 175)">
+        But tody is a gift thatswhy it is called as present.
+      </p>
+      <h2 style="color: rgb(61, 88, 39)">Language</h2>
+      <ul id="1" style="color: rgb(213, 216, 38)"></ul>
+      <img
+      id="img-1"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAACxCAMAAADOHZloAAAAxlBMVEX////+/v4Are////0Aru////wArfH8//8Apurz//+L3PYApufn+v79//3//f8Aru0fpuInreMAo+aB2vKz4/b3//8AqvCb2PI8s+nu//9nwu53yO8ArPMAqewAoufV9voAn905suHB7PeBy+io3vEApe5MtuHI6/SN0+tlxOnn+fyJ0fIcptqh3O5JrNve9P6j1++45PI3u+huyufa/P9at9602+6Nz+LB5PKu6Phpwt2l3eoAm+Nt0PFZv+iK2/jB9/9nzvXR7U1aAAAPIUlEQVR4nO2biXbbNhaGQYIAxHIVI1KixUUbJcuyY2uits40407f/6Xmv6Cc2okLZWbkxqfFf3IscRFJfLi4C4gw55TYX1en227pWDovy9IxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIxydIx6RXpcE5/nP5rjAtF2OC0m6vj/reu16TDAKNHxJkS+Cpop3/Y5IxFf3s6ERfEA3/pU/nhZnS5naTB7Mrhf3s6nw/54WK1u5hfB92grr1EZqHjRH9WA/8vvR4dHqnysLiDtQRBFtSuK6XreVImSXqFQfc3sh2QcKKIs8dG5+HiZnfzPs2aoiik57n0L3Fd/JHSC0L+5PbHzy8f6+mn4qJ35ScaoxzhOAqnivPAOZftxJF2v6psF6vlwyTIsqJ7l0pXul/I03T+K8tR+i4wN3XqVwKdJDiG7SmM36oz2Y4St7CWiySdZTSGyFTqd6n7h3S+eATDJm0rxSJKAk7RITSc5JzJeM5Dhzn+dTNwPXCBeyHv4spvpPPkIi/xoe9KxKpv9Dc0xvfL8qSR/bl0nMgfAkuCtksi4yaJHHwLHee5g2EOe76pPwRz+ObyphTqRGMwvP33aTrbszOFxPPQgR8eHkFIL/EoPsniXUo2dIIOz+9u7sYjHj9u+3fjm/Ho6IDx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"
+      />
+    </div>
+    <div>
+        <p id="edit" >UvBy4dU9LSFMEQyKoqrIjhBgE3gnWpErRETPdq4Ffq</p>
+        <button id="clickMe">Click Me</button>
+    </div>
+    <div id="myElement">Hover over me!</div>
+    <script src="./dom.js"></script>
+  </body>
+</html>
