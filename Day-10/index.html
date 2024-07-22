@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #toggleImage {
+            max-width: 200px;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <p id="1" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, perspiciatis!</p>
+    
+    <button id="2" >Click Me</button>
+
+    <img id="toggleImage" src="data:image/png;base64,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" alt="Toggleable image">
+
+    <input id="3"></input:id>
+
+    <p id="4" ></p>
+
+    <div class="container">
+        <h2>Form Submit Event Demo</h2>
+        <form id="myForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="" name="email" placeholder="Your Email" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p>Check the console for form data after submission.</p>
+    </div>
+
+    <select>
+        <option value="JS">JS</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+      </select>
+
+      <ul id="parent-list">
+        <li>NextJS</li>
+        <li>Django</li>
+        <li>SpringBoot</li>
+    </ul>
+    <button id="click">click</button>
+
+    <script src="./evnetHandle.js"></script>
+</body>
+</html>
